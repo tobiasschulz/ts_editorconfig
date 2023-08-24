@@ -20,13 +20,21 @@ done | sort
 
 find ~/leuchtraketen/ -name nukebuild | while read a
 do
-    cat nukebuild.editorconfig > $a/.editorconfig
+    cat nukebuild.editorconfig > "$a"/.editorconfig
+    (cd "$a" && (
+        git commit -m ".editorconfig" "$a"/.editorconfig
+        git push
+    ))
 done
 
 find_editorconfigs \
     | grep -v /nukebuild/ \
     | while read a
 do
-    cat ts.editorconfig > $a
+    cat ts.editorconfig > "$a"
+    (cd $(dirname "$a") && (
+        git commit -m ".editorconfig" "$a"
+        git push
+    ))
 done
 
