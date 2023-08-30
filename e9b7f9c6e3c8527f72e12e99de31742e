@@ -34,7 +34,12 @@ dotnet_style_qualification_for_method = false:none
 dotnet_style_qualification_for_property = false:none
 
 # ReSharper properties
+resharper_html_attribute_style = first_attribute_on_single_line
+resharper_html_max_blank_lines_between_tags = 1
+resharper_html_space_before_self_closing = true
 resharper_max_attribute_length_for_same_line = 180
+no_indent_inside_if_element_longer_than = 5000
+ij_html_space_inside_empty_tag = true
 
 # Solution Files
 [*.sln]
@@ -993,9 +998,9 @@ ij_markdown_min_lines_around_header = 0
 ij_markdown_min_lines_between_paragraphs = 0
 
 [{*.yaml, *.yml}]
-indent_size = 4
+indent_size = 2
 ij_yaml_keep_indents_on_empty_lines = false
 ij_yaml_keep_line_breaks = true
-ij_yaml_space_before_colon = true
+ij_yaml_space_before_colon = false
 ij_yaml_spaces_within_braces = true
 ij_yaml_spaces_within_brackets = true
