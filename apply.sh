@@ -7,6 +7,7 @@ function find_editorconfigs() {
         | grep -v /node_modules/ \
         | grep -v /bin/ \
         | grep -v /obj/ \
+        | grep -v /siemens/ \
         | cat
 }
 
